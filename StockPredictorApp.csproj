@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\crystal_ball_predict.png" />
+    <None Remove="Resources\load_icon.png" />
+    <None Remove="Resources\train_icon.png" />
+    <None Remove="Resources\wizard_predict.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\crystal_ball_predict.png" />
+    <Resource Include="Resources\load_icon.png" />
+    <Resource Include="Resources\train_icon.png" />
+    <Resource Include="Resources\wizard_predict.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="2.0.1" />
+    <PackageReference Include="Microsoft.ML.TimeSeries" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>
