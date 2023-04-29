@@ -5,19 +5,37 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\magic_ball_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\crystal_ball_cartoon.png" />
     <None Remove="Resources\crystal_ball_predict.png" />
     <None Remove="Resources\load_icon.png" />
+    <None Remove="Resources\magic_ball_icon.png" />
+    <None Remove="Resources\potion_logo.png" />
+    <None Remove="Resources\speech_bubble_drawing.png" />
     <None Remove="Resources\train_icon.png" />
+    <None Remove="Resources\wizard_cartoon.png" />
     <None Remove="Resources\wizard_predict.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\magic_ball_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\potion_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\crystal_ball_cartoon.png" />
     <Resource Include="Resources\crystal_ball_predict.png" />
     <Resource Include="Resources\load_icon.png" />
+    <Resource Include="Resources\magic_ball_icon.png" />
+    <Resource Include="Resources\speech_bubble_drawing.png" />
     <Resource Include="Resources\train_icon.png" />
+    <Resource Include="Resources\wizard_cartoon.png" />
     <Resource Include="Resources\wizard_predict.png" />
   </ItemGroup>
 

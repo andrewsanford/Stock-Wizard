@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StockPredictorApp"
         mc:Ignorable="d"
-        Title="Stock Wizard" Height="300" Width="300"
+        Title="Stock Wizard" Height="500" Width="500"
         WindowStartupLocation="CenterScreen"
         Background="Beige">
     <Grid>
@@ -28,7 +28,7 @@
             Grid.Column="1"
             Margin="20"
             Content="Load a Model"
-            FontSize="20"
+            FontSize="30"
             Foreground="Gray"
             Background="Transparent" Click="btnLoadModel_Click"/>
 
@@ -38,7 +38,7 @@
             Grid.Column="1"
             Margin="20"
             Content="Train a Model"
-            FontSize="20"
+            FontSize="30"
             Foreground="Gray"
             Background="Transparent" Click="btnTrainModel_Click"/>
 

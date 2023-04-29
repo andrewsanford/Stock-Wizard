@@ -16,16 +16,22 @@ using System.Windows.Shapes;
 namespace StockPredictorApp.Views
 {
     /// <summary>
-    /// Interaction logic for LoadWindow.xaml
+    /// Interaction logic for ResultWindow.xaml
     /// </summary>
-    public partial class LoadWindow : Window
+    public partial class ResultWindow : Window
     {
-        private MainViewModel _viewModel;
-        public LoadWindow(MainViewModel viewModel)
+        public ResultWindow(MainViewModel viewModel)
         {
             InitializeComponent();
 
-            _viewModel = viewModel;
+            DataContext = viewModel;
+        }
+
+        private void btnNewPrediction_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow newWindow = new MainWindow();
+            newWindow.Show();
+            Close();
         }
     }
 }

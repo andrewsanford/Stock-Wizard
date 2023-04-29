@@ -7,6 +7,11 @@
         <ResourceDictionary>
             <BitmapImage x:Key="load_logo" UriSource="Resources\load_icon.png"></BitmapImage>
             <BitmapImage x:Key="train_logo" UriSource="Resources\train_icon.png"></BitmapImage>
+            <BitmapImage x:Key="window_logo" UriSource="Resources\magic_ball_icon.png"></BitmapImage>
+            <BitmapImage x:Key="crystal_ball_drawing" UriSource="Resources\crystal_ball_cartoon.png"></BitmapImage>
+            <BitmapImage x:Key="wizard_drawing" UriSource="Resources\wizard_cartoon.png"></BitmapImage>
+            <BitmapImage x:Key="speech_bubble_drawing" UriSource="Resources\speech_bubble_drawing.png"></BitmapImage>
+            <BitmapImage x:Key="potion_logo" UriSource="Resources\potion_logo.png"></BitmapImage>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

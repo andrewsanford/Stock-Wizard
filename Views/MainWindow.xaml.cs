@@ -32,15 +32,23 @@ namespace StockPredictorApp
 
         private void btnLoadModel_Click(object sender, RoutedEventArgs e)
         {
-            LoadWindow newWindow = new LoadWindow(_viewModel);
-            newWindow.Show();
-            this.Close();  
+            _viewModel.UploadModel();
+            _viewModel.MakePrediction(); 
+            SwitchWindows();
         }
 
         private void btnTrainModel_Click(object sender, RoutedEventArgs e)
         {
             _viewModel.UploadDataFile();
             _viewModel.MakePrediction();
+            SwitchWindows();
+        }
+
+        private void SwitchWindows()
+        {
+            ResultWindow newWindow = new ResultWindow(_viewModel);
+            newWindow.Show();
+            Close();
         }
     }
 }

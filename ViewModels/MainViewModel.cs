@@ -20,11 +20,29 @@ namespace StockPredictorApp.ViewModels
         private ITransformer? _model;
         private MLModel _predictor;
 
-        private float _finalPrediction;
+        private string _wizardLine;
+        private string _finalPrediction;
+
+        private List<string> _wizardLines;
 
         public MainViewModel()
         {
             _predictor = new MLModel();
+            _wizardLines = new List<string>
+            {
+                "I'd get in on that!",
+                "Fortune favors the brave!",
+                "By my beard!",
+                "The ball doesn't lie!",
+                "Don't stare too long!",
+                "Lunch is on you today!",
+                "I'm not surprised!"
+            };
+
+
+
+            Random rnd = new Random();
+            WizardLine = _wizardLines[rnd.Next(0, _wizardLines.Count)];
         }
 
         public void UploadDataFile()
@@ -63,13 +81,18 @@ namespace StockPredictorApp.ViewModels
                 _model = _predictor.Train();
             }
 
-            FinalPrediction = _predictor.Predict(_model)[0];
+            FinalPrediction = _predictor.Predict(_model)[0].ToString("c2");
 
             Trace.WriteLine(FinalPrediction.ToString() + "confirmed");
 
         }
 
-        public float FinalPrediction
+        public void UploadModel()
+        {
+            _model = _predictor.Load();
+        }
+
+        public string FinalPrediction
         {
             get
             {
@@ -78,6 +101,19 @@ namespace StockPredictorApp.ViewModels
             set
             {
                 _finalPrediction = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string WizardLine
+        {
+            get
+            {
+                return _wizardLine;
+            }
+            set
+            {
+                _wizardLine = value;
                 OnPropertyChanged();
             }
         }
